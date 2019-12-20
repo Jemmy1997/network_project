@@ -25,7 +25,7 @@ namespace client1_c
             try
             {
                 TcpClient _client = new TcpClient();// Provides client connections for TCP network services.
-                _client.Connect("192.168.1.101", 8888);
+                _client.Connect("192.168.1.1", 8888);
                 NetworkStream _ns = _client.GetStream();// connect to the media/ stream/ link 
 
                 /* FOR IMAGE note using below function */
@@ -62,14 +62,16 @@ namespace client1_c
                 //File.WriteAllBytes("C:\\Users\\JemmY_NeutroN\\Desktop\\azan.mp3", _audio);
                 //MessageBox.Show("audio succeeded","Client");
 
+
+
                 /*FOR VIDEO */
-                StreamReader _sz = new StreamReader(_ns);
-                int _videoLength = int.Parse(_sz.ReadLine());
-                MessageBox.Show(_videoLength.ToString(), "Client");
-                byte[] _video = new byte[_videoLength];
-                _ns.Read(_video, 0, _videoLength);
-                File.WriteAllBytes("C:\\Users\\JemmY_NeutroN\\Desktop\\caaaaat.mp4", _video);
-                MessageBox.Show("video succeeded", "Client");
+                //StreamReader _sz = new StreamReader(_ns);
+                //int _videoLength = int.Parse(_sz.ReadLine());
+                //MessageBox.Show(_videoLength.ToString(), "Client");
+                //byte[] _video = new byte[_videoLength];
+                //_ns.Read(_video, 0, _videoLength);
+                //File.WriteAllBytes("C:\\Users\\JemmY_NeutroN\\Desktop\\caaaaat.mp4", _video);
+                //MessageBox.Show("video succeeded", "Client");
 
                 _client.Close();
                 
