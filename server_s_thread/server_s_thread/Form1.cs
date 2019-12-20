@@ -94,25 +94,30 @@ namespace server_s_thread
            /* FOR AUDIO */
            //string fileName = "AzanByat.mp3";
            //string filePath = @"E:\";
-           //byte[] audioByte = File.ReadAllBytes(filePath+fileName);
-           //MessageBox.Show(audioByte.ToString());
+           //byte[] audioByte = File.ReadAllBytes(filePath + fileName);
            //StreamWriter sz = new StreamWriter(ns);
            //sz.WriteLine(audioByte.Length);
            //sz.Flush();
+           //StreamWriter swa = new StreamWriter(ns);
+           //for (int i = 0; i < audioByte.Length; i++)
+           //{
+           //    swa.WriteLine(audioByte[i]);
+           //    swa.Flush();
+           //}
            //ns.Write(audioByte, 0, audioByte.Length);
            
 
            /*FOR VIDEO */
-           byte[] videobyte = File.ReadAllBytes("E:\\cat.mp4");
-           StreamWriter sz = new StreamWriter(ns);
-           sz.WriteLine(videobyte.Length);
-           sz.Flush();
-           StreamWriter sw = new StreamWriter(ns);
-           for (int i = 0; i < videobyte.Length; i++)
-           {
-               sw.WriteLine(videobyte[i]);
-               sw.Flush();
-           }
+           //byte[] videobyte = File.ReadAllBytes("E:\\cat.mp4");
+           //StreamWriter sz = new StreamWriter(ns);
+           //sz.WriteLine(videobyte.Length);
+           //sz.Flush();
+           //StreamWriter swv = new StreamWriter(ns);
+           //for (int i = 0; i < videobyte.Length; i++)
+           //{
+           //    swv.WriteLine(videobyte[i]);
+           //    swv.Flush();
+           //}
            //ns.Write(videobyte, 0, videobyte.Length);
 
            server.Close();

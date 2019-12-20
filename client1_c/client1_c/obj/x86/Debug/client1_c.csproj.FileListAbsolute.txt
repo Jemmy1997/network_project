@@ -119,3 +119,11 @@ C:\Users\JemmY_NeutroN\Desktop\network_project\client1_c\client1_c\obj\x86\Debug
 C:\Users\JemmY_NeutroN\Desktop\network_project\client1_c\client1_c\obj\x86\Debug\client1_c.Form1.resources
 C:\Users\JemmY_NeutroN\Desktop\network_project\client1_c\client1_c\obj\x86\Debug\client1_c.Properties.Resources.resources
 C:\Users\JemmY_NeutroN\Desktop\network_project\client1_c\client1_c\obj\x86\Debug\client1_c.csproj.GenerateResource.Cache
+E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final_Project\network_project\client1_c\client1_c\obj\x86\Debug\client1_c.exe
+E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final_Project\network_project\client1_c\client1_c\obj\x86\Debug\client1_c.pdb
+E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final_Project\network_project\client1_c\client1_c\bin\Debug\client1_c.exe
+E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final_Project\network_project\client1_c\client1_c\bin\Debug\client1_c.pdb
+E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final_Project\network_project\client1_c\client1_c\obj\x86\Debug\client1_c.csprojResolveAssemblyReference.cache
+E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final_Project\network_project\client1_c\client1_c\obj\x86\Debug\client1_c.Form1.resources
+E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final_Project\network_project\client1_c\client1_c\obj\x86\Debug\client1_c.Properties.Resources.resources
+E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final_Project\network_project\client1_c\client1_c\obj\x86\Debug\client1_c.csproj.GenerateResource.Cache
