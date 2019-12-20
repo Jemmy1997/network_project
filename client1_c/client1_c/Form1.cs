@@ -25,7 +25,7 @@ namespace client1_c
             try
             {
                 TcpClient _client = new TcpClient();// Provides client connections for TCP network services.
-                _client.Connect("192.168.1.5", 8888);
+                _client.Connect("192.168.1.101", 8888);
                 NetworkStream _ns = _client.GetStream();// connect to the media/ stream/ link 
 
                 /* FOR IMAGE note using below function */
@@ -52,6 +52,16 @@ namespace client1_c
                 //for (int i = 0; i < count; i++)
                 //    MessageBox.Show(_arr[i], "Client | paths of images ");
 
+
+                /*FOR AUDIO */
+                StreamReader _sz = new StreamReader(_ns);
+                int _audioLength = int.Parse(_sz.ReadLine());
+                MessageBox.Show(_audioLength.ToString(), "Client");
+                byte[] _audio = new byte[_audioLength];
+                _ns.Read(_audio, 0, _audioLength);
+                File.WriteAllBytes("C:\\Users\\JemmY_NeutroN\\Desktop\\azan.mp3", _audio);
+                MessageBox.Show("audio succeeded","Client");
+
                 _client.Close();
                 
             }
@@ -64,6 +74,7 @@ namespace client1_c
             Image _returnImage = Image.FromStream(_ms);
             return _returnImage;
         }
+       
 
         private void Form1_Load(object sender, EventArgs e)
         {

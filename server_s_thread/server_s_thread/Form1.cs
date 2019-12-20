@@ -72,7 +72,7 @@ namespace server_s_thread
            //StreamReader sr = new StreamReader(ns);
            //string path = sr.ReadLine();
            //MessageBox.Show(path, "Server| path received ");
-           //string [] dir =  Directory.GetFiles(path,"*.jpg");
+           //string[] dir = Directory.GetFiles(path, "*.jpg");
            //StreamWriter num = new StreamWriter(ns);
            //num.WriteLine(dir.Length);
            //num.Flush();
@@ -83,11 +83,14 @@ namespace server_s_thread
            //    sw.Flush();
            //} 
 
-           SoundPlayer player = new SoundPlayer("E:\\DJ.wav");
-           player.Play();
+           
 
            /* FOR AUDIO */
-
+           byte[] audiobyte = File.ReadAllBytes("E:\\AzanByat.mp3");
+           StreamWriter sz = new StreamWriter(ns);
+           sz.WriteLine(audiobyte.Length);
+           sz.Flush();
+           ns.Write(audiobyte, 0, audiobyte.Length);
 
            server.Close();
        }

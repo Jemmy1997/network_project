@@ -80,3 +80,11 @@ C:\Users\JemmY_NeutroN\Desktop\network\server_s_thread\server_s_thread\obj\x86\D
 C:\Users\JemmY_NeutroN\Desktop\network\server_s_thread\server_s_thread\obj\x86\Debug\server_s_thread.csproj.GenerateResource.Cache
 C:\Users\JemmY_NeutroN\Desktop\network\server_s_thread\server_s_thread\bin\Debug\server_s_thread.exe
 C:\Users\JemmY_NeutroN\Desktop\network\server_s_thread\server_s_thread\bin\Debug\server_s_thread.pdb
+C:\Users\JemmY_NeutroN\Desktop\network_project\server_s_thread\server_s_thread\obj\x86\Debug\server_s_thread.exe
+C:\Users\JemmY_NeutroN\Desktop\network_project\server_s_thread\server_s_thread\obj\x86\Debug\server_s_thread.pdb
+C:\Users\JemmY_NeutroN\Desktop\network_project\server_s_thread\server_s_thread\bin\Debug\server_s_thread.exe
+C:\Users\JemmY_NeutroN\Desktop\network_project\server_s_thread\server_s_thread\bin\Debug\server_s_thread.pdb
+C:\Users\JemmY_NeutroN\Desktop\network_project\server_s_thread\server_s_thread\obj\x86\Debug\server_s_thread.csprojResolveAssemblyReference.cache
+C:\Users\JemmY_NeutroN\Desktop\network_project\server_s_thread\server_s_thread\obj\x86\Debug\server_s_thread.Form1.resources
+C:\Users\JemmY_NeutroN\Desktop\network_project\server_s_thread\server_s_thread\obj\x86\Debug\server_s_thread.Properties.Resources.resources
+C:\Users\JemmY_NeutroN\Desktop\network_project\server_s_thread\server_s_thread\obj\x86\Debug\server_s_thread.csproj.GenerateResource.Cache
