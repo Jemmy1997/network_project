@@ -25,7 +25,8 @@ namespace client1_c
             try
             {
                 TcpClient _client = new TcpClient();// Provides client connections for TCP network services.
-                _client.Connect("192.168.1.101", 8888);
+                //_client.Connect("192.168.1.101", 8888);
+                _client.Connect("192.168.1.1", 8888);
                 NetworkStream _ns = _client.GetStream();// connect to the media/ stream/ link 
 
                 /* FOR IMAGE note using below function */
@@ -38,7 +39,10 @@ namespace client1_c
                     _imgArray[i] = byte.Parse(sr.ReadLine());
                 
                 Image img = byteArrayToImage(_imgArray);
-                img.Save("C:\\Users\\JemmY_NeutroN\\Desktop\\img.jpeg");
+                //img.Save("C:\\Users\\JemmY_NeutroN\\Desktop\\img.jpeg");
+                //img.Save(@"E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks & Projects\Final_Project\img.jpg");
+                img.Save(@"E:\B\College\Biomedical\img.jpg");
+
                 MessageBox.Show("Image has been saved ", "Client");
 
                 /* FOR PATHS of images  i.e. array of text */ 
