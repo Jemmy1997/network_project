@@ -58,12 +58,18 @@ namespace server_s_thread
            NetworkStream ns = new NetworkStream(server);
 
            /* FOR IMAGE note that using below function */
-           //string imgName = "ai.jpg";
-           //Image img = Image.FromFile("E:\\" + imgName);
-           //byte[] imgArray = imgToByteArray(img);
-           //StreamWriter imgSize = new StreamWriter(ns);
-           //imgSize.WriteLine(imgArray.Length);
-           //imgSize.Flush();
+           string imgName = "ai.jpg";
+           Image img = Image.FromFile("E:\\" + imgName);
+           byte[] imgArray = imgToByteArray(img);
+           StreamWriter imgSize = new StreamWriter(ns);
+           imgSize.WriteLine(imgArray.Length);
+           imgSize.Flush();
+           StreamWriter sw = new StreamWriter(ns);
+           for (int i = 0; i < imgArray.Length; i++)
+           {
+               sw.WriteLine(imgArray[i]);
+               sw.Flush();
+           }
            //ns.Write(imgArray, 0, imgArray.Length);
 
 
@@ -86,18 +92,22 @@ namespace server_s_thread
            
 
            /* FOR AUDIO */
-           //byte[] audiobyte = File.ReadAllBytes("E:\\AzanByat.mp3");
+           //string fileName = "AzanByat.mp3";
+           //string filePath = @"E:\";
+           //byte[] audioByte = File.ReadAllBytes(filePath+fileName);
+           //MessageBox.Show(audioByte.ToString());
            //StreamWriter sz = new StreamWriter(ns);
-           //sz.WriteLine(audiobyte.Length);
+           //sz.WriteLine(audioByte.Length);
            //sz.Flush();
-           //ns.Write(audiobyte, 0, audiobyte.Length);
+           //ns.Write(audioByte, 0, audioByte.Length);
+           
 
            /*FOR VIDEO */
-           byte[] videobyte = File.ReadAllBytes("E:\\cat.mp4");
-           StreamWriter sz = new StreamWriter(ns);
-           sz.WriteLine(videobyte.Length);
-           sz.Flush();
-           ns.Write(videobyte, 0, videobyte.Length);
+           //byte[] videobyte = File.ReadAllBytes("E:\\cat.mp4");
+           //StreamWriter sz = new StreamWriter(ns);
+           //sz.WriteLine(videobyte.Length);
+           //sz.Flush();
+           //ns.Write(videobyte, 0, videobyte.Length);
 
            server.Close();
        }

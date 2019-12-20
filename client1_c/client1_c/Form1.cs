@@ -25,17 +25,21 @@ namespace client1_c
             try
             {
                 TcpClient _client = new TcpClient();// Provides client connections for TCP network services.
-                _client.Connect("192.168.1.1", 8888);
+                _client.Connect("192.168.1.101", 8888);
                 NetworkStream _ns = _client.GetStream();// connect to the media/ stream/ link 
 
                 /* FOR IMAGE note using below function */
-                //StreamReader arrSize = new StreamReader(_ns);
-                //int imgSize = int.Parse(arrSize.ReadLine());
-                //byte[] _imgArray = new byte[imgSize];
+                StreamReader arrSize = new StreamReader(_ns);
+                int imgSize = int.Parse(arrSize.ReadLine());
+                byte[] _imgArray = new byte[imgSize];
                 //_ns.Read(_imgArray, 0, _imgArray.Length);
-                //Image img = byteArrayToImage(_imgArray);
-                //img.Save("C:\\Users\\JemmY_NeutroN\\Desktop\\img.jpeg");
-                //MessageBox.Show("Image has been saved ", "Client");
+                StreamReader sr = new StreamReader(_ns);
+                for (int i = 0; i < _imgArray.Length; i++)
+                    _imgArray[i] = byte.Parse(sr.ReadLine());
+                
+                Image img = byteArrayToImage(_imgArray);
+                img.Save("C:\\Users\\JemmY_NeutroN\\Desktop\\img.jpeg");
+                MessageBox.Show("Image has been saved ", "Client");
 
                 /* FOR PATHS of images  i.e. array of text */ 
                 //StreamWriter _sw = new StreamWriter(_ns);
@@ -58,9 +62,9 @@ namespace client1_c
                 //int _audioLength = int.Parse(_sz.ReadLine());
                 //MessageBox.Show(_audioLength.ToString(), "Client");
                 //byte[] _audio = new byte[_audioLength];
-                //_ns.Read(_audio, 0, _audioLength);
+                //_ns.Read(_audio, 0, _audio.Length);
                 //File.WriteAllBytes("C:\\Users\\JemmY_NeutroN\\Desktop\\azan.mp3", _audio);
-                //MessageBox.Show("audio succeeded","Client");
+                //MessageBox.Show("audio succeeded", "Client");
 
 
 
