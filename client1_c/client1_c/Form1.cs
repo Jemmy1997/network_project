@@ -29,17 +29,17 @@ namespace client1_c
                 NetworkStream _ns = _client.GetStream();// connect to the media/ stream/ link 
 
                 /* FOR IMAGE note using below function */
-                StreamReader arrSize = new StreamReader(_ns);
-                int imgSize = int.Parse(arrSize.ReadLine());
-                byte[] _imgArray = new byte[imgSize];
-                //_ns.Read(_imgArray, 0, _imgArray.Length);
-                StreamReader sr = new StreamReader(_ns);
-                for (int i = 0; i < _imgArray.Length; i++)
-                    _imgArray[i] = byte.Parse(sr.ReadLine());
+                //StreamReader arrSize = new StreamReader(_ns);
+                //int imgSize = int.Parse(arrSize.ReadLine());
+                //byte[] _imgArray = new byte[imgSize];
+                ////_ns.Read(_imgArray, 0, _imgArray.Length);
+                //StreamReader sr = new StreamReader(_ns);
+                //for (int i = 0; i < _imgArray.Length; i++)
+                //    _imgArray[i] = byte.Parse(sr.ReadLine());
                 
-                Image img = byteArrayToImage(_imgArray);
-                img.Save("C:\\Users\\JemmY_NeutroN\\Desktop\\img.jpeg");
-                MessageBox.Show("Image has been saved ", "Client");
+                //Image img = byteArrayToImage(_imgArray);
+                //img.Save("C:\\Users\\JemmY_NeutroN\\Desktop\\img.jpeg");
+                //MessageBox.Show("Image has been saved ", "Client");
 
                 /* FOR PATHS of images  i.e. array of text */ 
                 //StreamWriter _sw = new StreamWriter(_ns);
@@ -69,13 +69,16 @@ namespace client1_c
 
 
                 /*FOR VIDEO */
-                //StreamReader _sz = new StreamReader(_ns);
-                //int _videoLength = int.Parse(_sz.ReadLine());
-                //MessageBox.Show(_videoLength.ToString(), "Client");
-                //byte[] _video = new byte[_videoLength];
+                StreamReader _sz = new StreamReader(_ns);
+                int _videoLength = int.Parse(_sz.ReadLine());
+                MessageBox.Show(_videoLength.ToString(), "Client");
+                byte[] _video = new byte[_videoLength];
                 //_ns.Read(_video, 0, _videoLength);
-                //File.WriteAllBytes("C:\\Users\\JemmY_NeutroN\\Desktop\\caaaaat.mp4", _video);
-                //MessageBox.Show("video succeeded", "Client");
+                StreamReader sr = new StreamReader(_ns);
+                for (int i = 0; i < _video.Length; i++)
+                    _video[i] = byte.Parse(sr.ReadLine());
+                File.WriteAllBytes("C:\\Users\\JemmY_NeutroN\\Desktop\\caaaaat.mp4", _video);
+                MessageBox.Show("video succeeded", "Client");
 
                 _client.Close();
                 
