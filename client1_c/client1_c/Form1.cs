@@ -54,13 +54,22 @@ namespace client1_c
 
 
                 /*FOR AUDIO */
+                //StreamReader _sz = new StreamReader(_ns);
+                //int _audioLength = int.Parse(_sz.ReadLine());
+                //MessageBox.Show(_audioLength.ToString(), "Client");
+                //byte[] _audio = new byte[_audioLength];
+                //_ns.Read(_audio, 0, _audioLength);
+                //File.WriteAllBytes("C:\\Users\\JemmY_NeutroN\\Desktop\\azan.mp3", _audio);
+                //MessageBox.Show("audio succeeded","Client");
+
+                /*FOR VIDEO */
                 StreamReader _sz = new StreamReader(_ns);
-                int _audioLength = int.Parse(_sz.ReadLine());
-                MessageBox.Show(_audioLength.ToString(), "Client");
-                byte[] _audio = new byte[_audioLength];
-                _ns.Read(_audio, 0, _audioLength);
-                File.WriteAllBytes("C:\\Users\\JemmY_NeutroN\\Desktop\\azan.mp3", _audio);
-                MessageBox.Show("audio succeeded","Client");
+                int _videoLength = int.Parse(_sz.ReadLine());
+                MessageBox.Show(_videoLength.ToString(), "Client");
+                byte[] _video = new byte[_videoLength];
+                _ns.Read(_video, 0, _videoLength);
+                File.WriteAllBytes("C:\\Users\\JemmY_NeutroN\\Desktop\\caaaaat.mp4", _video);
+                MessageBox.Show("video succeeded", "Client");
 
                 _client.Close();
                 

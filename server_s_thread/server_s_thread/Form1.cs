@@ -86,11 +86,18 @@ namespace server_s_thread
            
 
            /* FOR AUDIO */
-           byte[] audiobyte = File.ReadAllBytes("E:\\AzanByat.mp3");
+           //byte[] audiobyte = File.ReadAllBytes("E:\\AzanByat.mp3");
+           //StreamWriter sz = new StreamWriter(ns);
+           //sz.WriteLine(audiobyte.Length);
+           //sz.Flush();
+           //ns.Write(audiobyte, 0, audiobyte.Length);
+
+           /*FOR VIDEO */
+           byte[] videobyte = File.ReadAllBytes("E:\\cat.mp4");
            StreamWriter sz = new StreamWriter(ns);
-           sz.WriteLine(audiobyte.Length);
+           sz.WriteLine(videobyte.Length);
            sz.Flush();
-           ns.Write(audiobyte, 0, audiobyte.Length);
+           ns.Write(videobyte, 0, videobyte.Length);
 
            server.Close();
        }
