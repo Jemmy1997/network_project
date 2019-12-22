@@ -60,7 +60,8 @@ namespace server_s_thread
            StreamReader recieve = new StreamReader(ns);
            string path = recieve.ReadLine();
 
-           if (path.Contains("jpeg") || path.Contains("jpg") || path.Contains("png")) {
+           if (path.Contains("jpeg") || path.Contains("jpg") || path.Contains("png"))
+           {
                /* FOR IMAGE note that using below function */
                Image img = Image.FromFile(path);
                byte[] imgArray = imgToByteArray(img);
@@ -75,10 +76,10 @@ namespace server_s_thread
                }
                ns.Write(imgArray, 0, imgArray.Length);
            }
-           else if (path.Contains("mp3") || path.Contains("wav") )
+           else if (path.Contains("mp3") || path.Contains("wav"))
            {
                /* FOR AUDIO */
-              
+
                byte[] audioByte = File.ReadAllBytes(path);
                StreamWriter sza = new StreamWriter(ns);
                sza.WriteLine(audioByte.Length);
@@ -89,7 +90,7 @@ namespace server_s_thread
                    swa.WriteLine(audioByte[i]);
                    swa.Flush();
                }
-            
+
            }
            else if (path.Contains("mp4") || path.Contains("mkv"))
            {
