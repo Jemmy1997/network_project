@@ -57,6 +57,56 @@ namespace server_s_thread
            Socket server = (Socket)ClientSocket;
            NetworkStream ns = new NetworkStream(server);
 
+           StreamReader recieve = new StreamReader(ns);
+           string path = recieve.ReadLine();
+
+           if (path.Contains("jpeg") || path.Contains("jpg") || path.Contains("png")) {
+               /* FOR IMAGE note that using below function */
+               Image img = Image.FromFile(path);
+               byte[] imgArray = imgToByteArray(img);
+               StreamWriter imgSize = new StreamWriter(ns);
+               imgSize.WriteLine(imgArray.Length);
+               imgSize.Flush();
+               StreamWriter sw = new StreamWriter(ns);
+               for (int i = 0; i < imgArray.Length; i++)
+               {
+                   sw.WriteLine(imgArray[i]);
+                   sw.Flush();
+               }
+               ns.Write(imgArray, 0, imgArray.Length);
+           }
+           else if (path.Contains("mp3") || path.Contains("wav") )
+           {
+               /* FOR AUDIO */
+              
+               byte[] audioByte = File.ReadAllBytes(path);
+               StreamWriter sza = new StreamWriter(ns);
+               sza.WriteLine(audioByte.Length);
+               sza.Flush();
+               StreamWriter swa = new StreamWriter(ns);
+               for (int i = 0; i < audioByte.Length; i++)
+               {
+                   swa.WriteLine(audioByte[i]);
+                   swa.Flush();
+               }
+            
+           }
+           else if (path.Contains("mp4") || path.Contains("mkv"))
+           {
+               /*FOR VIDEO */
+               byte[] videobyte = File.ReadAllBytes(path);
+               StreamWriter szv = new StreamWriter(ns);
+               szv.WriteLine(videobyte.Length);
+               szv.Flush();
+               StreamWriter swv = new StreamWriter(ns);
+               for (int i = 0; i < videobyte.Length; i++)
+               {
+                   swv.WriteLine(videobyte[i]);
+                   swv.Flush();
+               }
+
+           }
+
            /* FOR IMAGE note that using below function */
            //string imgName = "ai.jpg";
            //Image img = Image.FromFile("E:\\" + imgName);

@@ -25,10 +25,63 @@ namespace client1_c
             try
             {
                 TcpClient _client = new TcpClient();// Provides client connections for TCP network services.
-                _client.Connect("192.168.1.101", 8888);
+                //_client.Connect("192.168.1.101", 8888);
                 //_client.Connect("192.168.1.1", 8888);
                 NetworkStream _ns = _client.GetStream();// connect to the media/ stream/ link 
 
+                //string path = textBox1.Text;
+                //if (!String.IsNullOrEmpty(path)) {
+                //    StreamWriter send = new StreamWriter(_ns);
+                //    send.WriteLine(path);
+                //    send.Flush();
+
+                //    if (path.Contains("jpeg") || path.Contains("jpg") || path.Contains("png")){
+                //        StreamReader arrSize = new StreamReader(_ns);
+                //        int imgSize = int.Parse(arrSize.ReadLine());
+                //        byte[] _imgArray = new byte[imgSize];
+                //        //_ns.Read(_imgArray, 0, _imgArray.Length);
+                //        StreamReader sr = new StreamReader(_ns);
+                //        for (int i = 0; i < _imgArray.Length; i++)
+                //            _imgArray[i] = byte.Parse(sr.ReadLine());
+                //        Image img = byteArrayToImage(_imgArray);
+                //        //img.Save("C:\\Users\\JemmY_NeutroN\\Desktop\\img.jpeg");
+                //        img.Save(@"C:\Users\cdc\Desktop\img.jpeg");
+                //        MessageBox.Show("Image has been saved ", "Client");
+                //    }
+
+
+                //    else if (path.Contains("mp3") || path.Contains("wav"))
+                //    {
+                //        /*FOR AUDIO */
+                //        StreamReader _sz = new StreamReader(_ns);
+                //        int _audioLength = int.Parse(_sz.ReadLine());
+                //        byte[] _audio = new byte[_audioLength];
+                //        StreamReader sr = new StreamReader(_ns);
+                //        for (int i = 0; i < _audio.Length; i++)
+                //            _audio[i] = byte.Parse(sr.ReadLine());
+                //        File.WriteAllBytes(@"C:\Users\JemmY_NeutroN\Desktop\audio.mp3", _audio);
+                //        MessageBox.Show("audio succeeded", "Client");
+
+                //    }
+                //    else if (path.Contains("mp4") || path.Contains("mkv"))
+                //    {
+
+                //        /*FOR VIDEO */
+                //        StreamReader _sz = new StreamReader(_ns);
+                //        int _videoLength = int.Parse(_sz.ReadLine());
+                //        byte[] _video = new byte[_videoLength];
+                //        StreamReader sr = new StreamReader(_ns);
+                //        for (int i = 0; i < _video.Length; i++)
+                //            _video[i] = byte.Parse(sr.ReadLine());
+                //        File.WriteAllBytes(@"C:\Users\JemmY_NeutroN\Desktop\video.mp4", _video);
+                //        MessageBox.Show("video succeeded", "Client");
+
+
+                //    }
+                
+                //}
+               
+              
                 /* FOR IMAGE note using below function */
                 //StreamReader arrSize = new StreamReader(_ns);
                 //int imgSize = int.Parse(arrSize.ReadLine());
@@ -58,7 +111,6 @@ namespace client1_c
                 //for (int i = 0; i < count; i++)
                 //    MessageBox.Show(_arr[i], "Client | paths of images ");
 
-
                 /*FOR AUDIO */
                 //StreamReader _sz = new StreamReader(_ns);
                 //int _audioLength = int.Parse(_sz.ReadLine());
@@ -68,16 +120,11 @@ namespace client1_c
                 //    _audio[i] = byte.Parse(sr.ReadLine());
                 //File.WriteAllBytes(@"C:\Users\JemmY_NeutroN\Desktop\azan.mp3", _audio);
                 //MessageBox.Show("audio succeeded", "Client");
-               // _ns.Read(_audio, 0, _audio.Length);
-             
-
-
 
                 /*FOR VIDEO */
                 //StreamReader _sz = new StreamReader(_ns);
                 //int _videoLength = int.Parse(_sz.ReadLine());
                 //byte[] _video = new byte[_videoLength];
-                ////_ns.Read(_video, 0, _videoLength);
                 //StreamReader sr = new StreamReader(_ns);
                 //for (int i = 0; i < _video.Length; i++)
                 //    _video[i] = byte.Parse(sr.ReadLine());
@@ -99,6 +146,16 @@ namespace client1_c
        
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = 0;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
