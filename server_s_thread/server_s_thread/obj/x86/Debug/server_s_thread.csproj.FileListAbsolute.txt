@@ -88,3 +88,5 @@ C:\Users\JemmY_NeutroN\Desktop\network_project\server_s_thread\server_s_thread\o
 C:\Users\JemmY_NeutroN\Desktop\network_project\server_s_thread\server_s_thread\obj\x86\Debug\server_s_thread.Form1.resources
 C:\Users\JemmY_NeutroN\Desktop\network_project\server_s_thread\server_s_thread\obj\x86\Debug\server_s_thread.Properties.Resources.resources
 C:\Users\JemmY_NeutroN\Desktop\network_project\server_s_thread\server_s_thread\obj\x86\Debug\server_s_thread.csproj.GenerateResource.Cache
+E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final_Project\network_project - Copy\server_s_thread\server_s_thread\obj\x86\Debug\server_s_thread.exe
+E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final_Project\network_project - Copy\server_s_thread\server_s_thread\obj\x86\Debug\server_s_thread.pdb

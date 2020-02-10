@@ -127,3 +127,5 @@ E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final
 E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final_Project\network_project\client1_c\client1_c\obj\x86\Debug\client1_c.Form1.resources
 E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final_Project\network_project\client1_c\client1_c\obj\x86\Debug\client1_c.Properties.Resources.resources
 E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final_Project\network_project\client1_c\client1_c\obj\x86\Debug\client1_c.csproj.GenerateResource.Cache
+E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final_Project\network_project - Copy\client1_c\client1_c\obj\x86\Debug\client1_c.exe
+E:\B\College\Biomedical\Fourth year\First semester\Networks\Tasks&Projects\Final_Project\network_project - Copy\client1_c\client1_c\obj\x86\Debug\client1_c.pdb
