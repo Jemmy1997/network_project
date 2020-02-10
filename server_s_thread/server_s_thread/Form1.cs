@@ -60,53 +60,66 @@ namespace server_s_thread
            StreamReader recieve = new StreamReader(ns);
            string path = recieve.ReadLine();
 
-           if (path.Contains("jpeg") || path.Contains("jpg") || path.Contains("png"))
+           byte[] databyte = File.ReadAllBytes(path);
+           StreamWriter szv = new StreamWriter(ns);
+           szv.WriteLine(databyte.Length);
+           szv.Flush();
+           StreamWriter swv = new StreamWriter(ns);
+           for (int i = 0; i < databyte.Length; i++)
            {
-               /* FOR IMAGE note that using below function */
-               Image img = Image.FromFile(path);
-               byte[] imgArray = imgToByteArray(img);
-               StreamWriter imgSize = new StreamWriter(ns);
-               imgSize.WriteLine(imgArray.Length);
-               imgSize.Flush();
-               StreamWriter sw = new StreamWriter(ns);
-               for (int i = 0; i < imgArray.Length; i++)
-               {
-                   sw.WriteLine(imgArray[i]);
-                   sw.Flush();
-               }
-               ns.Write(imgArray, 0, imgArray.Length);
+               swv.WriteLine(databyte[i]);
+               swv.Flush();
            }
-           else if (path.Contains("mp3") || path.Contains("wav"))
-           {
-               /* FOR AUDIO */
 
-               byte[] audioByte = File.ReadAllBytes(path);
-               StreamWriter sza = new StreamWriter(ns);
-               sza.WriteLine(audioByte.Length);
-               sza.Flush();
-               StreamWriter swa = new StreamWriter(ns);
-               for (int i = 0; i < audioByte.Length; i++)
-               {
-                   swa.WriteLine(audioByte[i]);
-                   swa.Flush();
-               }
 
-           }
-           else if (path.Contains("mp4") || path.Contains("mkv"))
-           {
-               /*FOR VIDEO */
-               byte[] videobyte = File.ReadAllBytes(path);
-               StreamWriter szv = new StreamWriter(ns);
-               szv.WriteLine(videobyte.Length);
-               szv.Flush();
-               StreamWriter swv = new StreamWriter(ns);
-               for (int i = 0; i < videobyte.Length; i++)
-               {
-                   swv.WriteLine(videobyte[i]);
-                   swv.Flush();
-               }
+          
+           //if (path.Contains("jpeg") || path.Contains("jpg") || path.Contains("png"))
+           //{
+           //    /* FOR IMAGE note that using below function */
+           //    Image img = Image.FromFile(path);
+           //    byte[] imgArray = imgToByteArray(img);
+           //    StreamWriter imgSize = new StreamWriter(ns);
+           //    imgSize.WriteLine(imgArray.Length);
+           //    imgSize.Flush();
+           //    StreamWriter sw = new StreamWriter(ns);
+           //    for (int i = 0; i < imgArray.Length; i++)
+           //    {
+           //        sw.WriteLine(imgArray[i]);
+           //        sw.Flush();
+           //    }
+           //    //ns.Write(imgArray, 0, imgArray.Length);
+           //}
+           //else if (path.Contains("mp3") || path.Contains("wav"))
+           //{
+           //    /* FOR AUDIO */
 
-           }
+           //    byte[] audioByte = File.ReadAllBytes(path);
+           //    StreamWriter sza = new StreamWriter(ns);
+           //    sza.WriteLine(audioByte.Length);
+           //    sza.Flush();
+           //    StreamWriter swa = new StreamWriter(ns);
+           //    for (int i = 0; i < audioByte.Length; i++)
+           //    {
+           //        swa.WriteLine(audioByte[i]);
+           //        swa.Flush();
+           //    }
+
+           //}
+           //else if (path.Contains("mp4") || path.Contains("mkv"))
+           //{
+           //    /*FOR VIDEO */
+           //    byte[] videobyte = File.ReadAllBytes(path);
+           //    StreamWriter szv = new StreamWriter(ns);
+           //    szv.WriteLine(videobyte.Length);
+           //    szv.Flush();
+           //    StreamWriter swv = new StreamWriter(ns);
+           //    for (int i = 0; i < videobyte.Length; i++)
+           //    {
+           //        swv.WriteLine(videobyte[i]);
+           //        swv.Flush();
+           //    }
+
+           //}
 
            /* FOR IMAGE note that using below function */
            //string imgName = "ai.jpg";
@@ -142,34 +155,7 @@ namespace server_s_thread
 
            
 
-           /* FOR AUDIO */
-           //string fileName = "AzanByat.mp3";
-           //string filePath = @"E:\";
-           //byte[] audioByte = File.ReadAllBytes(filePath + fileName);
-           //StreamWriter sz = new StreamWriter(ns);
-           //sz.WriteLine(audioByte.Length);
-           //sz.Flush();
-           //StreamWriter swa = new StreamWriter(ns);
-           //for (int i = 0; i < audioByte.Length; i++)
-           //{
-           //    swa.WriteLine(audioByte[i]);
-           //    swa.Flush();
-           //}
-           //ns.Write(audioByte, 0, audioByte.Length);
-           
-
-           /*FOR VIDEO */
-           //byte[] videobyte = File.ReadAllBytes("E:\\cat.mp4");
-           //StreamWriter sz = new StreamWriter(ns);
-           //sz.WriteLine(videobyte.Length);
-           //sz.Flush();
-           //StreamWriter swv = new StreamWriter(ns);
-           //for (int i = 0; i < videobyte.Length; i++)
-           //{
-           //    swv.WriteLine(videobyte[i]);
-           //    swv.Flush();
-           //}
-           //ns.Write(videobyte, 0, videobyte.Length);
+         
 
            server.Close();
        }

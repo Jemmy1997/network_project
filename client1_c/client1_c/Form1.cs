@@ -40,12 +40,11 @@ namespace client1_c
                     StreamReader arrSize = new StreamReader(_ns);
                     int imgSize = int.Parse(arrSize.ReadLine());
                     byte[] _imgArray = new byte[imgSize];
-                    //_ns.Read(_imgArray, 0, _imgArray.Length);
                     StreamReader sr = new StreamReader(_ns);
                     for (int i = 0; i < _imgArray.Length; i++)
                         _imgArray[i] = byte.Parse(sr.ReadLine());
                     Image img = byteArrayToImage(_imgArray);
-                    //img.Save(@"C:\Users\JemmY_NeutroN\Desktop\img.jpeg");
+                    img.Save(@"C:\Users\JemmY_NeutroN\Desktop\img.jpeg");
                     //img.Save(@"C:\Users\cdc\Desktop\img.jpeg");
                     MessageBox.Show("Image has been saved successfully", "Client");
                 }
@@ -61,8 +60,8 @@ namespace client1_c
                     button1.Enabled = false;
                     for (int i = 0; i < _audio.Length; i++)
                         _audio[i] = byte.Parse(sr.ReadLine());
-                    //File.WriteAllBytes(@"C:\Users\JemmY_NeutroN\Desktop\audio.mp3", _audio);
                     //File.WriteAllBytes(@"C:\Users\cdc\Desktop\audio.mp3", _audio);
+                    File.WriteAllBytes(@"C:\Users\JemmY_NeutroN\Desktop\audio.mp3", _audio);
                     MessageBox.Show("audio has been saved successfully", "Client");
                     button1.Enabled = true;
 
@@ -78,14 +77,12 @@ namespace client1_c
                     button1.Enabled = false;
                     for (int i = 0; i < _video.Length; i++)
                         _video[i] = byte.Parse(sr.ReadLine());
-                    //File.WriteAllBytes(@"C:\Users\JemmY_NeutroN\Desktop\video.mp4", _video);
                     //File.WriteAllBytes(@"C:\Users\cdc\Desktop\video.mp4", _video);
+                    File.WriteAllBytes(@"C:\Users\JemmY_NeutroN\Desktop\video.mp4", _video);
                     MessageBox.Show("video has been saved succeeded", "Client");
                     button1.Enabled = true;
 
                 }
-
-
 
 
                 /* FOR IMAGE note using below function */
